@@ -1,0 +1,13 @@
+[Unit]
+Description=Decrypts shared network mount
+Requires=dev-nbd0p1.device
+BindsTo=nbd@nbd0.service shared.mount
+After=dev-nbd0p1.device
+Before=shared.mount
+
+[Service]
+Type=oneshot
+TimeoutStartSec=0
+RemainAfterExit=yes
+ExecStart=/usr/bin/cryptsetup open /dev/nbd0p1 projects -d /luks.nbd.key
+ExecStop=/usr/bin/cryptsetup close projects

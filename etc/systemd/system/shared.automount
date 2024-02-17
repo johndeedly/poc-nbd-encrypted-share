@@ -1,0 +1,5 @@
+[Automount]
+Where=/shared
+
+[Install]
+WantedBy=multi-user.target

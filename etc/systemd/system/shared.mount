@@ -1,0 +1,9 @@
+[Unit]
+BindsTo=shared-decrypt.service
+After=dev-mapper-shared.device
+
+[Mount]
+What=/dev/mapper/shared
+Where=/shared
+Type=btrfs
+Options=subvol=@,compress=zstd:4,noatime

@@ -1,0 +1,8 @@
+[generic]
+        user = nbdwrite
+        group = nbdwrite
+[shareddrive]
+        exportname = /dev/sdb
+        readonly = false
+        multifile = false
+        copyonwrite = false

@@ -1,0 +1,8 @@
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/usr/bin/true
+ExecStop=/usr/bin/umount -f -l /shared
+
+[Install]
+WantedBy=multi-user.target

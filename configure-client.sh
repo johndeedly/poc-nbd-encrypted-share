@@ -9,5 +9,6 @@ mkdir -p /etc/systemd/system
 cp ./etc/systemd/system/shared-decrypt.service /etc/systemd/system/
 cp ./etc/systemd/system/shared.mount /etc/systemd/system/
 cp ./etc/systemd/system/shared.automount /etc/systemd/system/
+cp ./etc/systemd/system/shared-unmount.service /etc/systemd/system/
 
-systemctl enable shared.mount
+systemctl enable shared-unmount.service shared.automount

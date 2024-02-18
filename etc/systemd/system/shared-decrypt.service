@@ -1,5 +1,4 @@
 [Unit]
-Description=Decrypts shared network mount
 Requires=dev-nbd0p1.device
 BindsTo=nbd@nbd0.service shared.mount
 After=dev-nbd0p1.device

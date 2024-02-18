@@ -1,4 +1,5 @@
 [Unit]
+Requires=dev-mapper-shared.device
 BindsTo=shared-decrypt.service
 After=dev-mapper-shared.device
 

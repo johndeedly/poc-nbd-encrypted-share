@@ -8,5 +8,5 @@ Before=shared.mount
 Type=oneshot
 TimeoutStartSec=0
 RemainAfterExit=yes
-ExecStart=/usr/bin/cryptsetup open /dev/nbd0p1 projects -d /luks.nbd.key
-ExecStop=/usr/bin/cryptsetup close projects
+ExecStart=/usr/bin/cryptsetup open /dev/nbd0p1 shared -d /luks.nbd.key
+ExecStop=/usr/bin/cryptsetup close shared
